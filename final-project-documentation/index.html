@@ -19,9 +19,9 @@
         </nav>
         <header class="documentation-header">
             <section class="center-text">
-                <h1>Work Title</h1>
-                <h2>by Your Name</h6>
-                <p>Write a one-sentence summary of what the project is.</p> 
+                <h1>Hungry Pigeons</h1>
+                <h2>by Xuebiao Liu</h6>
+                <p>Hungry Pigeons is an interactive art installation that explores the pigeon culture of London, seamlessly integrating the audience with pigeons, thereby creating a novel bridge between humans and these avian creatures.Hungry Pigeons is an interactive art installation that explores the pigeon culture of London, seamlessly integrating the audience with pigeons, thereby creating a novel bridge between humans and these avian creatures.</p> 
             </section>
         </header>
 
@@ -33,72 +33,55 @@
             </section>
             <section>
                 <h3>Introduction</h3>
-                <p>Write a short introduction, a short paragraph, giving a bit more detail about what the project is.</p>
+                <p>Hungry Pigeons is an interactive art installation that takes inspiration from London's pigeon population, inviting the audience to explore the potential value of pigeons within the urban context. By approaching the subject from the perspectives of human feeding and pigeon foraging, the installation employs body recognition technology to immerse the audience in the same visual perspective as pigeons, allowing them to search for food. The objective is to provide a deeply interactive experience of role reversal, enabling a profound understanding of the pigeons' survival status and inherent worth.</p>
             </section>
             <section>
                 <h3>Concept and Background Research</h3>
                 
-                <p>Write about the concept behind the project, in other words the creative or theoretical inspiration. Include details about any background research you may have done (don’t forget to include references in the reference section).</p>
-                <p>Consider writing about your work in relation to a creative, theoretical or computational tradition that you may be taking inspiration from, in other words think about how your work is situated in a particular making tradition. </p>
-                
-                <!-- if you have a full width image try make it not too tall -->
-                <img src="../assets/images/repeating-diagonal-lines-strip.jpeg"/>
-                
+                <p>The mention of London's pigeons evokes a range of emotional expressions from different individuals. On one hand, some perceive them as unique and fascinating ecological entities within the cityscape. On the other hand, some view them as "winged rats," associating them with filth and indiscriminate defecation. However, I believe that the majority of people do not actively engage in understanding the pigeons' living conditions in the urban environment. Their relationship with humans has been strong throughout history, as they were used as communication buses before the industrial revolution and later for military activities, but their valuable attributes have gradually been forgotten due to technological developments. And then, the pigeons' relatively strong reproductive capacity has led to the proliferation of pigeon colonies in London. This has led to the often-seen scenes of pigeon predation.</p>
+                <p>The purpose of Hungry Pigeons is not to categorize the presence of such pigeon populations in London as inherently positive or negative, but rather to provide the audience with a fresh understanding. It aims to encourage individuals to reconstruct their perception of the relationship between humans and pigeons, as well as the relationship between pigeons and the urban environment. </p>
+               
             </section>
             <section>
                 <h3>Technical Implementation</h3>
-
-                <!-- example of styling for three images, you can write your own styling -->
-                <div class="flex-container flex-basis-third">
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-square.jpeg"/>
-                    </div>
-                </div>
                 
-                <p>Write about the process of implementing your project. What technical elements or hardware are involved in your system. Write about why you made certain technical or design decisions etc. </p>
+                <p>The code of Hungry Pigeons can be divided into three major parts: the background generation section, the body recognition and flock feeding code section, and the physics section. </p>
+                <p>The background generation section is designed to address the issue of computer lag by forcibly splitting it from the main code. It utilizes a recursive algorithm to generate a forest background and a looping bird flock effect, which can result in visual inconsistencies. To solve this problem, I created the recursive forest separately and exported it as a background image for the final artwork. However, to use the random generation of the background, I kept a random tree generated in the main code part. The background is based on curves, altering the direction and length of the recursion to achieve the desired visual effect.</p>
+                <img src="../assets/images/background.png"/>
+
+                <p>The main code sections include four components. Firstly, the bird morphology code is implemented by referencing the idea of shifting the array length found online, which allows the drawn images to be partially flipped, creating a flock-like effect. Secondly, the code for generation and foraging is inspired by the Creatures OOP code from the second week's course, combining it with the concept of birds competing for food. </p>
+                <p>The third component is the body recognition section, where I incorporate the position information of people's heads into the changing bodies of each bird, achieving the desired following effect. The fourth component is an HTML element added to the bottom right of the interface to provide interactive instructions and information, enhancing the overall interactive experience.</p>
+                
+                <img src="../assets/images/final_page.png"/>
+
+                <p>The final physics section incorporates Arduino and a pushbutton to allow the button to control the generation of the random food in the artwork. When the button is pressed, confirmation feedback is provided through an LED light, enhancing user interactivity.</p>
             
-                <!-- example of styling for three images, you can write your own styling -->
                 <div class="flex-container flex-basis-half">
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/back.png"/>
                     </div>
                     <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                </div>
-
-                <!-- default flex item is for 4 & follows media query styling for home page -->
-                <div class="flex-container">
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
-                    </div>
-                    <div class="flex-item">
-                        <img src="../assets/images/repeating-diagonal-lines-rect.jpeg"/>
+                        <img src="../assets/images/face.png"/>
                     </div>
                 </div>
          
             </section>
             <section>
                 <h3>Reflection and Future Development</h3>
-                <p>Reflect on how the project went, what went well, what you learnt etc. Based on these reflections, conclude with how you would further develop this project if you were to make another version or how you would further develop your ideas.</p>
+               <p>Hungry Pigeons successfully achieved a deep integration between the audience and the flock, exploring an alternative possibility for the profound fusion of humans and pigeons. It delved into another dimension of the value expression of pigeon populations within the urban context of London.</p>
+               <p>During the creative process, the most significant aspect I experienced was the significance of interactivity in artwork. It allows the audience to engage more deeply with the intended message conveyed by the artist, providing greater potential for future creations of interactive artworks.</p>
+               <p>In terms of further development, I aspire to transform Arduino into a WiFi board to achieve wireless control, elevating the interactivity of Hungry Pigeons to the next level. Additionally, I aim to integrate the transmitted information into Max/MSP, combining it with real-time changing pigeon sounds, thereby enriching and enhancing the overall experience of the artwork.</p>
             </section>
             <section>
                 <h3>References</h3>
                 <ul>
-                    <li>Technical Reference example. Include link where possible.</li>
-                    <li>Conceptual Reference example. Include link where possible.</li>
+                    <li>p5.js Web Editor n.d., editor.p5js.org, viewed 20 April 2023, https://editor.p5js.org/eri.kalaitzidi/sketches/ODpPqP2un.</li>
+                    <li>triangle birds - Naoki Kanazawa - OpenProcessing n.d., openprocessing.org, viewed 22 April 2023, https://openprocessing.org/sketch/871526.</li>
+                    <li>Gaietto, D.M., 2019. Pigeon-Human Negotiations through Practice. TRACE∴ Journal for Human-Animal Studies, 5, pp.56-80.</li>
+                    <li>Hook, K., 2018. Designing with the body: Somaesthetic interaction design. Mit Press.</li>
+                    <li>Kwastek, K., 2013. Aesthetics of interaction in digital art. Mit Press.</li>
+                    <li>Hemelrijk, C.K. and Hildenbrandt, H., 2012. Schools of fish and flocks of birds: their shape and internal structure by self-organization. Interface focus, 2(6), pp.726-737.</li>
+                    <li>Hutton, M. and Goodman, G.T., 1980. Metal contamination of feral pigeons Columba livia from the London area: part 1—tissue accumulation of lead, cadmium and zinc. Environmental Pollution Series A, Ecological and Biological, 22(3), pp.207-217.</li>
                 </ul>
             </section>
         </main>
